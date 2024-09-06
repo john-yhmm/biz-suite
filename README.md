@@ -2,6 +2,13 @@
 
 BizSuite is an all-in-one app for managing key business operations seamlessly.
 
+## For developers
+- After cloning the project, you need to run `npm install` to install necessary packages.
+- Run `ng generate component <name>` to create your component files.
+- Then, add your component's route in `app.routes.ts` file
+- After that, add your page in `menu.component.html` file
+- And that's it. You can start writing your page.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
 
 ## Development server
