@@ -1,0 +1,19 @@
+<div style="height: 20px;"></div>
+
+<form [formGroup]="user" class="user-card">
+  <h2>User Information</h2>
+  <p>Name: <input type="text" formControlName="name" /></p>
+  <p>Age: <input type="text" formControlName="age" /></p>
+  <p>Email: <input type="email" formControlName="email" /></p>
+  <p>Date of Birth: <input type="text" formControlName="dateOfBirth" /></p>
+  <p><input type="button" value="Save" /></p>
+</form>
+
+<div style="height: 20px;"></div>
+
+<div class="user-card">
+  Name: {{ user.value.name }} <br>
+  Age: {{ user.value.age }} <br>
+  Email: {{ user.value.email }} <br>
+  Date of Birth: {{ user.value.dateOfBirth }} <br>
+</div>
