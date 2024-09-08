@@ -1,1 +1,25 @@
-<p>employee works!</p>
+<h2 class="text-center my-4">Employee Form</h2>
+<p class="text-center">Login to your employee account to get employee discount!</p>
+<p class="text-center"><a class="link-opacity-100" href="">Don't have an account? Sign up↗</a></p>
+
+<div class="container border border-dark rounded p-5 mb-5">
+    <form [formGroup]="employeeForm" class="w-100">
+        <div class="form-group">
+            <label>Employee ID : </label>
+            <input class="form-control" type="number" formControlName="id">
+        </div>
+        <div class="form-group">
+            <label>Employee Name : </label>
+            <input class="form-control" type="text" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label>Email : </label>
+            <input class="form-control" type="email" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label>Password : </label>
+            <input class="form-control" type="password" formControlName="password">
+        </div><br>
+        <button class="btn btn-primary" (click)="submit()">Submit</button>
+    </form>
+</div>
