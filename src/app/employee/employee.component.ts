@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-employee',
@@ -10,10 +10,11 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 })
 export class EmployeeComponent {
   employeeForm = new FormGroup({
-    id : new FormControl(""),
-    name: new FormControl(""),
-    email: new FormControl(""),
-    password: new FormControl(""),
+    empNum : new FormControl("", Validators.required),
+    name: new FormControl("", Validators.required),
+    position: new FormControl(""),
+    department: new FormControl(""),
+    password: new FormControl("", Validators.required),
   });
 
   submit() {
