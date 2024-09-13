@@ -1,20 +1,32 @@
-<div style="height: 20px;"></div>
+<div class="container">
+  <form [formGroup]="customer" class="customer-card">
+    <h2>Customer Information</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+    <div class="form-group">
+      <label for="phone_number">Phone Number:</label>
+      <input id="phone_number" type="number" formControlName="phone_number" />
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input id="address" type="text" formControlName="address" />
+    </div>
+    <div class="form-group form-actions">
+      <input type="button" value="Save" class="btn-save" />
+    </div>
+  </form>
 
-<form [formGroup]="customer" class="customer-card">
-  <h2>Customer Information</h2>
-  <p>Name: <input type="text" formControlName="name" /></p>
-  <p>Email: <input type="email" formControlName="email" /></p>
-  <p>Phone Number: <input type="number" formControlName="phone_number" /></p>
-  <p>Address: <input type="text" formControlName="address" /></p>
-  <p><input type="button" value="Save" /></p>
-</form>
-
-<div style="height: 20px;"></div>
-
-<div class="customer-card">
-  Name: {{ customer.value.name }} <br>
-  Email: {{ customer.value.email }} <br>
-  Phone Number: {{ customer.value.phone_number }} <br>
-  Address: {{ customer.value.address }} <br>
+  <div class="customer-card">
+    <p><strong>Name:</strong> {{ customer.value.name }}</p>
+    <p><strong>Email:</strong> {{ customer.value.email }}</p>
+    <p><strong>Phone Number:</strong> {{ customer.value.phone_number }}</p>
+    <p><strong>Address:</strong> {{ customer.value.address }}</p>
+  </div>
 </div>
 
