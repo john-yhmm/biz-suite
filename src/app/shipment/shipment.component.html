@@ -1,0 +1,22 @@
+
+
+<div style="height: 20px;"></div>
+
+<form [formGroup]="shipment" class="shipment-card">
+  <h2>Shipment Information</h2>
+  <p>TrackingNo: <input type="text" formControlName="trackingNo" /></p>
+  <p>Carrier: <input type="text" formControlName="carrier" /></p>
+  <p>Date: <input type="date" formControlName="date" /></p>
+  <p>Destination: <input type="text" formControlName="destination" /></p>
+  <p><input type="button" value="Save" (click)="onSave()" /></p>
+</form>
+
+<div style="height: 20px;"></div>
+
+<div *ngFor="let shipment of savedShipments; let i = index" class="shipment-card">
+  TrackingNo: {{ shipment.trackingNo }} <br>
+  Carrier: {{ shipment.carrier }} <br>
+  Date: {{ shipment.date }} <br>
+  Destination: {{ shipment.destination }} <br>
+  <button (click)="onDelete(i)" value="Delete"></button>
+</div>
