@@ -4,6 +4,7 @@ import { UserComponent } from './user/user.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { CustomerComponent } from './customer/customer.component';
 import { InvoiceComponent } from './invoice/invoice.component';
+import { ShipmentComponent } from './shipment/shipment.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
     { path: 'employee', component: EmployeeComponent},
     { path: 'customer', component: CustomerComponent},
     { path: 'invoice', component: InvoiceComponent},
+    { path: 'shipment', component: ShipmentComponent}
 ];
