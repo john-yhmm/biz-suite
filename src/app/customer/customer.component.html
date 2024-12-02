@@ -1,0 +1,32 @@
+<div class="container">
+  <form [formGroup]="customer" class="customer-card">
+    <h2>Customer Information</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+    <div class="form-group">
+      <label for="phone_number">Phone Number:</label>
+      <input id="phone_number" type="number" formControlName="phone_number" />
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input id="address" type="text" formControlName="address" />
+    </div>
+    <div class="form-group form-actions">
+      <input type="button" value="Save" class="btn-save" />
+    </div>
+  </form>
+
+  <div class="customer-card">
+    <p><strong>Name:</strong> {{ customer.value.name }}</p>
+    <p><strong>Email:</strong> {{ customer.value.email }}</p>
+    <p><strong>Phone Number:</strong> {{ customer.value.phone_number }}</p>
+    <p><strong>Address:</strong> {{ customer.value.address }}</p>
+  </div>
+</div>
+

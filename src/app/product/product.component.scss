@@ -1,0 +1,18 @@
+.row {
+    margin: 20px;
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.placeholder {
+    background-color: #333;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.products {
+    width: 300px;
+}

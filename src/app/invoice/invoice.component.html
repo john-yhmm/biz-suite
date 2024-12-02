@@ -1,0 +1,41 @@
+<div class="invoice-container">
+  <form [formGroup]="invoice" class="invoice-card">
+    <h2>Invoice Details</h2>
+
+    <div class="form-group">
+      <label for="invoiceNo">Invoice No:</label>
+      <input id="invoiceNo" type="text" formControlName="invoiceNo" />
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input id="date" type="date" formControlName="date" />
+    </div>
+
+    <div class="form-group">
+      <label for="customerName">Customer Name:</label>
+      <input id="customerName" type="text" formControlName="customerName" />
+    </div>
+
+    <div class="form-group">
+      <label for="totalAmount">Total Amount:</label>
+      <input id="totalAmount" type="number" formControlName="totalAmount" />
+    </div>
+
+    <div class="form-group">
+      <label for="dueDate">Due Date:</label>
+      <input id="dueDate" type="date" formControlName="dueDate" />
+    </div>
+
+    <button type="submit" class="btn-save">Save</button>
+  </form>
+
+  <div class="invoice-preview invoice-card">
+    <h3>Invoice Preview</h3>
+    <p><strong>Invoice No:</strong> {{ invoice.value.invoiceNo }}</p>
+    <p><strong>Date:</strong> {{ invoice.value.date }}</p>
+    <p><strong>Customer Name:</strong> {{ invoice.value.customerName }}</p>
+    <p><strong>Total Amount:</strong> {{ invoice.value.totalAmount }}</p>
+    <p><strong>Due Date:</strong> {{ invoice.value.dueDate }}</p>
+  </div>
+</div>
